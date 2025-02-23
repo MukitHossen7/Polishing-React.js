@@ -1,9 +1,11 @@
+import RepitComponent from "./components/RepitComponents/RepitComponent";
+
 function App() {
   return (
     <>
-      <h2 className="text-red-500 font-bold text-center mt-10 text-3xl">
-        Hello Mukit
-      </h2>
+      <RepitComponent></RepitComponent>
+      <RepitComponent></RepitComponent>
+      <RepitComponent></RepitComponent>
     </>
   );
 }
