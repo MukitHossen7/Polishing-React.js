@@ -4,10 +4,6 @@ function App() {
   return (
     <>
       <RepitComponent></RepitComponent>
-      <RepitComponent></RepitComponent>
-      <RepitComponent></RepitComponent>
-      <RepitComponent></RepitComponent>
-      <RepitComponent></RepitComponent>
     </>
   );
 }
