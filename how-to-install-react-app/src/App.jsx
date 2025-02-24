@@ -6,6 +6,8 @@ function App() {
       <RepitComponent></RepitComponent>
       <RepitComponent></RepitComponent>
       <RepitComponent></RepitComponent>
+      <RepitComponent></RepitComponent>
+      <RepitComponent></RepitComponent>
     </>
   );
 }
