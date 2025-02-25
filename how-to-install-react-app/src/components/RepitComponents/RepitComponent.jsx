@@ -1,10 +1,11 @@
-const RepitComponent = () => {
+/* eslint-disable react/prop-types */
+const RepitComponent = ({ name }) => {
   let students = [];
   console.log(Boolean(0));
   return (
     <>
       <h2 className="text-red-500 font-bold text-center mt-10 text-3xl">
-        Hello Mukit
+        Hello {name}
       </h2>
       <h2 className="text-red-500 font-bold text-center mt-10 text-3xl">
         Hello Mukit

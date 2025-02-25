@@ -1,9 +1,10 @@
 import RepitComponent from "./components/RepitComponents/RepitComponent";
 
 function App() {
+  const name = "Mukit";
   return (
     <>
-      <RepitComponent></RepitComponent>
+      <RepitComponent name={name}></RepitComponent>
     </>
   );
 }
