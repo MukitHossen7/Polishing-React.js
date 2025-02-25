@@ -15,7 +15,10 @@ function App() {
           </div>
         }
       >
-        <button>Contact</button>
+        <p>Hobbies: Gaming,Cooking</p>
+        <button className="border border-teal-500 px-3 py-1 rounded-md">
+          Contact
+        </button>
       </ProfileCard>
     </>
   );
