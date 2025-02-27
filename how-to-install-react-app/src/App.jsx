@@ -1,3 +1,4 @@
+import EventHandling from "./components/EventHandling";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RepitComponent from "./components/RepitComponents/RepitComponent";
 
@@ -20,6 +21,7 @@ function App() {
           Contact
         </button>
       </ProfileCard>
+      <EventHandling></EventHandling>
     </>
   );
 }
