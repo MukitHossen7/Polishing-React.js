@@ -1,16 +1,18 @@
+import ChildEventHandling from "./ChildEventHandling";
+
 const EventHandling = () => {
-  const handleButtonClick = (event) => {
-    console.log(event);
-    alert("Button Clicked");
+  const handleButtonClick = (user) => {
+    alert(`Hello ${user}`);
+  };
+  const handleButtonClick2 = () => {
+    alert("Hello User 2");
   };
   return (
     <div className=" flex flex-col items-center justify-center">
-      <button
-        className="bg-teal-400 px-3 py-1 rounded-md"
-        onClick={(event) => handleButtonClick(event)}
-      >
-        OnClick
-      </button>
+      <ChildEventHandling
+        onClick={() => handleButtonClick("Mukit")}
+        onClick2={handleButtonClick2}
+      ></ChildEventHandling>
     </div>
   );
 };
