@@ -1,4 +1,5 @@
 import EventHandling from "./components/EventHandling";
+import EventPropagation from "./components/EventPropagation";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RepitComponent from "./components/RepitComponents/RepitComponent";
 
@@ -22,6 +23,7 @@ function App() {
         </button>
       </ProfileCard>
       <EventHandling></EventHandling>
+      <EventPropagation></EventPropagation>
     </>
   );
 }
