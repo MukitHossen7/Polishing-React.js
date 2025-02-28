@@ -1,8 +1,9 @@
-import EventHandling from "./components/EventHandling";
+// import EventHandling from "./components/EventHandling";
 import EventPropagation from "./components/EventPropagation";
 import Hooks from "./components/Hooks";
-import ProfileCard from "./components/ProfileCard/ProfileCard";
-import RepitComponent from "./components/RepitComponents/RepitComponent";
+import StateChallenge from "./components/StateChallenge";
+// import ProfileCard from "./components/ProfileCard/ProfileCard";
+// import RepitComponent from "./components/RepitComponents/RepitComponent";
 
 function App() {
   // const name = "Raju";
@@ -26,6 +27,7 @@ function App() {
       <EventHandling></EventHandling> */}
       <EventPropagation></EventPropagation>
       <Hooks></Hooks>
+      <StateChallenge></StateChallenge>
     </>
   );
 }
