@@ -1,6 +1,7 @@
 // import EventHandling from "./components/EventHandling";
 import EventPropagation from "./components/EventPropagation";
 import Hooks from "./components/Hooks";
+import LiftingStateUp from "./components/LiftingStateUp/LiftingStateUp";
 import StateChallenge from "./components/StateChallenge";
 // import ProfileCard from "./components/ProfileCard/ProfileCard";
 // import RepitComponent from "./components/RepitComponents/RepitComponent";
@@ -28,6 +29,7 @@ function App() {
       <EventPropagation></EventPropagation>
       <Hooks></Hooks>
       <StateChallenge></StateChallenge>
+      <LiftingStateUp></LiftingStateUp>
     </>
   );
 }
