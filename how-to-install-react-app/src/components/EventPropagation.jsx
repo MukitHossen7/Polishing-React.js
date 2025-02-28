@@ -12,6 +12,7 @@ const EventPropagation = () => {
   const handleParent = () => {
     console.log("Parent clicked");
   };
+  console.log("This is Running");
   return (
     <>
       <div

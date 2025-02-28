@@ -5,10 +5,10 @@ import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RepitComponent from "./components/RepitComponents/RepitComponent";
 
 function App() {
-  const name = "Raju";
+  // const name = "Raju";
   return (
     <>
-      <RepitComponent name={name}></RepitComponent>
+      {/* <RepitComponent name={name}></RepitComponent>
       <ProfileCard
         name="Alice"
         age={30}
@@ -23,7 +23,7 @@ function App() {
           Contact
         </button>
       </ProfileCard>
-      <EventHandling></EventHandling>
+      <EventHandling></EventHandling> */}
       <EventPropagation></EventPropagation>
       <Hooks></Hooks>
     </>
