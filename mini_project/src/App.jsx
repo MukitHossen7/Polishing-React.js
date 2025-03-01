@@ -1,7 +1,9 @@
+import Toggle from "./components/Toggle";
+
 function App() {
   return (
     <>
-      <h2 className="text-red-500">Hello World</h2>
+      <Toggle></Toggle>
     </>
   );
 }
