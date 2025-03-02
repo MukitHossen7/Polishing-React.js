@@ -91,10 +91,10 @@ const Todo = () => {
           </p>
         )}
         <div className="flex flex-col gap-3 mt-4">
-          {tasks?.map((task, index) => (
+          {tasks?.map((task) => (
             <div
               className="bg-gray-100 p-4 rounded-lg shadow flex justify-between items-center"
-              key={index}
+              key={task.id}
             >
               <p
                 className={`font-medium ${
