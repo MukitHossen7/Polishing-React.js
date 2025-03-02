@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { MdDeleteForever } from "react-icons/md";
-import {
-  localStorageGetData,
-  localStorageSetData,
-} from "../../LocalStroage/LocalStroage";
+import { getDataLocalStorage, setDataLocalStorage } from "../../Local";
+
 const Todo = () => {
-  const [tasks, setTasks] = useState(() => localStorageGetData());
+  const [tasks, setTasks] = useState(getDataLocalStorage());
   const [inputValue, setInputValue] = useState({});
 
   // handle input value functions
@@ -62,9 +60,8 @@ const Todo = () => {
     toast.success("All tasks cleared successfully!");
   };
 
-  //todo : add data to localStorage
-  localStorageSetData(tasks);
-
+  //Store data to the Local Storage
+  setDataLocalStorage(tasks);
   // console.log(tasks);
   return (
     <div className="py-20 max-w-96 mx-auto">
