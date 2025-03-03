@@ -5,15 +5,9 @@ const Challenge = () => {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
-    console.log(count);
-    if (count < 100) {
-      setCount((prevCount) => prevCount + +inputValue);
-    }
+    setCount((prevCount) => prevCount + +inputValue);
   };
   const handleDecrement = () => {
-    if (count <= 0) {
-      return;
-    }
     setCount((prevCount) => prevCount - +inputValue);
   };
   const handleReset = () => {
@@ -45,12 +39,14 @@ const Challenge = () => {
       </div>
       <div className="flex gap-2 mt-4">
         <button
+          disabled={count >= 100}
           onClick={handleIncrement}
           className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-3 rounded-md"
         >
           Increment
         </button>
         <button
+          disabled={count <= 0}
           onClick={handleDecrement}
           className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-3 rounded-md"
         >
