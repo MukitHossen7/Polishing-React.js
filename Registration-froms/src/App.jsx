@@ -1,9 +1,11 @@
-import Controlled from "./components/Controlled";
+// import Controlled from "./components/Controlled";
+import Uncontrolled from "./components/Uncontrolled";
 
 function App() {
   return (
     <>
-      <Controlled></Controlled>
+      {/* <Controlled></Controlled> */}
+      <Uncontrolled></Uncontrolled>
     </>
   );
 }
