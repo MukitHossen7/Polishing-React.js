@@ -1,14 +1,17 @@
 // import Controlled from "./components/Controlled";
 // import Uncontrolled from "./components/Uncontrolled";
 
-import RegistrationFromReact from "./components/RegistrationFromReact";
+import ContactFrom from "./components/ContactFrom";
+
+// import RegistrationFromReact from "./components/RegistrationFromReact";
 
 function App() {
   return (
     <>
       {/* <Controlled></Controlled> */}
       {/* <Uncontrolled></Uncontrolled> */}
-      <RegistrationFromReact></RegistrationFromReact>
+      {/* <RegistrationFromReact></RegistrationFromReact> */}
+      <ContactFrom></ContactFrom>
     </>
   );
 }
