@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 
 const Challenge = () => {
+  const [inputValue, setInputValue] = useState(1);
   const [count, setCount] = useState(0);
+
   const handleIncrement = () => {
-    if (count === 100) {
-      return;
+    console.log(count);
+    if (count < 100) {
+      setCount((prevCount) => prevCount + +inputValue);
     }
-    setCount((prevCount) => prevCount + 1);
   };
   const handleDecrement = () => {
-    if (count === 0) {
+    if (count <= 0) {
       return;
     }
-    setCount((prevCount) => prevCount - 1);
+    setCount((prevCount) => prevCount - +inputValue);
   };
   const handleReset = () => {
     setCount(0);
   };
+  const handleInputValue = (value) => {
+    if (value >= 1) {
+      setInputValue(parseInt(value));
+    }
+  };
+
   return (
     <div className="max-w-96 my-20 mx-auto bg-white shadow-md rounded-md px-5 pb-5">
       <h2 className="text-3xl font-semibold text-center py-3">
@@ -30,6 +38,8 @@ const Challenge = () => {
         <label className="text-lg">Step: </label>
         <input
           type="number"
+          value={inputValue}
+          onChange={(e) => handleInputValue(e.target.value)}
           className="border-2 border-gray-800 rounded-md px-2"
         ></input>
       </div>
