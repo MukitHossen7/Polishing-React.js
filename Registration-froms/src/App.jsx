@@ -1,9 +1,9 @@
-import From from "./components/From";
+import Controlled from "./components/Controlled";
 
 function App() {
   return (
     <>
-      <From></From>
+      <Controlled></Controlled>
     </>
   );
 }
