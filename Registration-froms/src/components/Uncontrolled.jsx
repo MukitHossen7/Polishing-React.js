@@ -9,6 +9,7 @@ const Uncontrolled = () => {
 
     const registrationData = { firstName, lastName, email, password, number };
     console.log(registrationData);
+    e.target.reset();
   };
 
   return (
