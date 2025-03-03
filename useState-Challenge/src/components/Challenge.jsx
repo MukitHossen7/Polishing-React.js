@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Challenge = () => {
-  const [inputValue, setInputValue] = useState(1);
+  const [inputValue, setInputValue] = useState(0);
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
@@ -31,8 +31,8 @@ const Challenge = () => {
         </p>
         <label className="text-lg">Step: </label>
         <input
-          type="number"
-          value={inputValue}
+          type="text"
+          defaultValue={inputValue}
           onChange={(e) => handleInputValue(e.target.value)}
           className="border-2 border-gray-800 rounded-md px-2"
         ></input>
