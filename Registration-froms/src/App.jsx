@@ -1,7 +1,9 @@
 // import Controlled from "./components/Controlled";
 // import Uncontrolled from "./components/Uncontrolled";
 
-import ContactFrom from "./components/ContactFrom";
+import UseEffectCleanup from "./components/UseEffectCleanup";
+
+// import ContactFrom from "./components/ContactFrom";
 
 // import RegistrationFromReact from "./components/RegistrationFromReact";
 
@@ -11,7 +13,8 @@ function App() {
       {/* <Controlled></Controlled> */}
       {/* <Uncontrolled></Uncontrolled> */}
       {/* <RegistrationFromReact></RegistrationFromReact> */}
-      <ContactFrom></ContactFrom>
+      {/* <ContactFrom></ContactFrom> */}
+      <UseEffectCleanup></UseEffectCleanup>
     </>
   );
 }
