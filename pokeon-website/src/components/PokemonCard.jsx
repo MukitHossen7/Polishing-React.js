@@ -1,10 +1,10 @@
 const PokemonCard = ({ data }) => {
   return (
-    <div className="bg-gray-100 shadow-2xl rounded-xl flex flex-col items-center py-10">
+    <div className="bg-gray-100 shadow-2xl rounded-xl flex flex-col items-center py-10 gap-3">
       <div className="">
         <img
-          src={data.sprites.front_default}
-          className="w-20 h-20 object-cover"
+          src={data.sprites.other.dream_world.front_default}
+          className="w-full h-20 object-cover"
           alt={data.name}
         />
       </div>

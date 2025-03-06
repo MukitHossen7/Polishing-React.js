@@ -4,6 +4,7 @@ import PokemonCard from "./PokemonCard";
 
 const NotFetchData = () => {
   const [apiData, setApiData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     try {
@@ -14,11 +15,12 @@ const NotFetchData = () => {
         const pokemon = await res.json();
         return pokemon;
       });
-      console.log(pokemonData);
       const pokemon = await Promise.all(pokemonData);
       setApiData(pokemon);
+      setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   };
 
@@ -26,7 +28,10 @@ const NotFetchData = () => {
     fetchData();
   }, []);
   console.log(apiData);
-  // if (!apiData) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <p className="text-3xl font-bold text-center min-h-screen">Loading...</p>
+    );
   return (
     <div className="w-11/12 mx-auto">
       <h2 className="text-2xl font-bold text-center mt-20">
