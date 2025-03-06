@@ -1,7 +1,9 @@
 // import Controlled from "./components/Controlled";
 // import Uncontrolled from "./components/Uncontrolled";
 
-import Counter from "./components/Counter";
+import UseRef from "./components/UseRef";
+
+// import Counter from "./components/Counter";
 
 // import UseEffectCleanup from "./components/UseEffectCleanup";
 
@@ -17,7 +19,8 @@ function App() {
       {/* <RegistrationFromReact></RegistrationFromReact> */}
       {/* <ContactFrom></ContactFrom> */}
       {/* <UseEffectCleanup></UseEffectCleanup> */}
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <UseRef></UseRef>
     </>
   );
 }
