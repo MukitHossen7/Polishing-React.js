@@ -5,10 +5,11 @@ import PokemonCard from "./PokemonCard";
 const NotFetchData = () => {
   const [apiData, setApiData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
     try {
-      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=24");
+      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=80");
       const data = await res.json();
       const pokemonData = data.results.map(async (currentData) => {
         const res = await fetch(currentData.url);
@@ -27,7 +28,15 @@ const NotFetchData = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(apiData);
+  // console.log(apiData);
+  const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const searchValue = apiData.filter((currentValue) =>
+    currentValue.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   if (loading)
     return (
       <p className="text-3xl font-bold text-center min-h-screen">Loading...</p>
@@ -37,8 +46,17 @@ const NotFetchData = () => {
       <h2 className="text-2xl font-bold text-center mt-20">
         Fetch Data Not Right Away
       </h2>
+      <form className="flex items-center justify-center mt-8">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchTermChange}
+          placeholder="Search Pokémon"
+          className="w-96 px-4 py-2 rounded-lg shadow-sm focus:outline-none"
+        />
+      </form>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
-        {apiData?.map((data) => (
+        {searchValue?.map((data) => (
           <div key={data.id}>
             <PokemonCard data={data}></PokemonCard>
           </div>
