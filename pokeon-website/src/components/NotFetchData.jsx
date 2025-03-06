@@ -29,14 +29,21 @@ const NotFetchData = () => {
     fetchData();
   }, []);
   // console.log(apiData);
-  const handleSearchTermChange = (e) => {
-    setSearchTerm(e.target.value);
+  // const handleSearchTermChange = (e) => {
+  //   setSearchTerm(e.target.value);
+  // };
+
+  // const searchValue = apiData.filter((currentValue) =>
+  //   currentValue.name.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+
+  const handleSearchForm = (e) => {
+    e.preventDefault();
+    const searchValue = apiData.filter((currentValue) =>
+      currentValue.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setApiData(searchValue);
   };
-
-  const searchValue = apiData.filter((currentValue) =>
-    currentValue.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   if (loading)
     return (
       <p className="text-3xl font-bold text-center min-h-screen">Loading...</p>
@@ -46,17 +53,23 @@ const NotFetchData = () => {
       <h2 className="text-2xl font-bold text-center mt-20">
         Fetch Data Not Right Away
       </h2>
-      <form className="flex items-center justify-center mt-8">
+      <form
+        onSubmit={handleSearchForm}
+        className="flex items-center justify-center mt-8"
+      >
         <input
           type="text"
           value={searchTerm}
-          onChange={handleSearchTermChange}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search Pokémon"
           className="w-96 px-4 py-2 rounded-lg shadow-sm focus:outline-none"
         />
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+          Search
+        </button>
       </form>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
-        {searchValue?.map((data) => (
+        {apiData?.map((data) => (
           <div key={data.id}>
             <PokemonCard data={data}></PokemonCard>
           </div>
