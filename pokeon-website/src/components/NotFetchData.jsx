@@ -4,13 +4,16 @@ import { useState } from "react";
 const NotFetchData = () => {
   const [apiData, setApiData] = useState(null);
 
+  const fetchData = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await res.json();
+    setApiData(data);
+  };
+
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => setApiData(data))
-      .catch((error) => console.log(error));
+    fetchData();
   }, []);
-  // if (!apiData) return <p>Loading...</p>;
+  if (!apiData) return <p>Loading...</p>;
   return (
     <div>
       <h2 className="text-2xl font-bold text-center mt-20">
