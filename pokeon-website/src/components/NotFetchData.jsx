@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import PokemonCard from "./PokemonCard";
 
 const NotFetchData = () => {
   const [apiData, setApiData] = useState([]);
@@ -27,15 +28,17 @@ const NotFetchData = () => {
   console.log(apiData);
   // if (!apiData) return <p>Loading...</p>;
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <h2 className="text-2xl font-bold text-center mt-20">
         Fetch Data Not Right Away
       </h2>
-      {/* {apiData?.map((data) => (
-        <div key={data.id}>
-          <h3>{data.title}</h3>
-        </div>
-      ))} */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+        {apiData?.map((data) => (
+          <div key={data.id}>
+            <PokemonCard data={data}></PokemonCard>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
