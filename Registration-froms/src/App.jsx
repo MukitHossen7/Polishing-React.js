@@ -1,7 +1,9 @@
 // import Controlled from "./components/Controlled";
 // import Uncontrolled from "./components/Uncontrolled";
 
-import UseRef from "./components/UseRef";
+import ChildA from "./components/ChildA";
+
+// import UseRef from "./components/UseRef";
 
 // import Counter from "./components/Counter";
 
@@ -12,6 +14,7 @@ import UseRef from "./components/UseRef";
 // import RegistrationFromReact from "./components/RegistrationFromReact";
 
 function App() {
+  const data = "Mukit";
   return (
     <>
       {/* <Controlled></Controlled> */}
@@ -20,7 +23,11 @@ function App() {
       {/* <ContactFrom></ContactFrom> */}
       {/* <UseEffectCleanup></UseEffectCleanup> */}
       {/* <Counter></Counter> */}
-      <UseRef></UseRef>
+      {/* <UseRef></UseRef> */}
+      <div>
+        <h1 className="text-center mb-4 text-xl">This is Parent components</h1>
+      </div>
+      <ChildA data={data}></ChildA>
     </>
   );
 }
