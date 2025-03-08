@@ -1,4 +1,4 @@
-import { useHooks } from "../Hooks/useHooks";
+import useHooks from "../Hooks/useHooks";
 
 const About = () => {
   const { name, age } = useHooks();
