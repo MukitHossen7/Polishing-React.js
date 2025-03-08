@@ -4,7 +4,7 @@ import { ThemeContext } from "../provider/ThemeProvider";
 const Home = () => {
   const { theme, handleToggleButton } = use(ThemeContext);
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen gap-2 bg-white dark:bg-gray-800">
+    <div className="flex flex-col justify-center items-center gap-2 bg-white dark:bg-gray-800 pt-20">
       <h1 className="font-extrabold text-2xl dark:text-gray-100">
         Hello Users
       </h1>
