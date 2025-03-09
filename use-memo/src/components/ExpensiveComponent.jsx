@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 const ExpensiveComponent = () => {
   const sum = () => {
     console.log("Calculation sum....");
@@ -8,7 +10,11 @@ const ExpensiveComponent = () => {
 
     return i;
   };
-  let total = sum();
+
+  let total = useMemo(() => {
+    return sum();
+  }, []);
+  //   let total = sum();
 
   return (
     <div>
