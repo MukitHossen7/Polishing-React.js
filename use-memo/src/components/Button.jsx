@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Button = ({ onClick, children }) => {
+const Button = memo(({ onClick, children }) => {
   console.log(`Rendering button: ${children}`);
   return (
     <div>
@@ -14,6 +14,6 @@ const Button = ({ onClick, children }) => {
       </button>
     </div>
   );
-};
+});
 
 export default Button;
