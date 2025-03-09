@@ -5,7 +5,6 @@ const UseReducerCounter = () => {
     count: 0,
   };
   const reducer = (state, action) => {
-    console.log(state);
     if (action.type === "INCREMENT") {
       return { count: state.count + 1 };
     }
@@ -21,7 +20,6 @@ const UseReducerCounter = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state.count);
   return (
     <div className="flex flex-col justify-center items-center gap-3 mt-20">
       <h3 className="dark:text-gray-100 text-lg font-medium">
