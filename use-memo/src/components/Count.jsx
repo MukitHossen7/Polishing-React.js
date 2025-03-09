@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChildComponent } from "./ChildComponent";
 
 const Count = () => {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ const Count = () => {
           Increment
         </button>
       </div>
+      <ChildComponent></ChildComponent>
     </div>
   );
 };
