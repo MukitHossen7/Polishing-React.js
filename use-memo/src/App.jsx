@@ -1,9 +1,9 @@
-import Count from "./components/Count";
+import MemoParentComponent from "./components/MemoParentComponent";
 
 function App() {
   return (
     <>
-      <Count></Count>
+      <MemoParentComponent></MemoParentComponent>
     </>
   );
 }
