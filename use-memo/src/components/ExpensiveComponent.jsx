@@ -15,7 +15,7 @@ const ExpensiveComponent = () => {
     return sum();
   }, []);
   //   let total = sum();
-
+  console.log("Hello");
   return (
     <div>
       <p className="text-lg font-bold ">Sum :{total}</p>
