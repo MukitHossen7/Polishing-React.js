@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ChildComponent } from "./ChildComponent";
 
 const Count = () => {
   const [count, setCount] = useState(0);
   console.log("Parent Components");
+  const bioData = useMemo(() => {
+    return {
+      name: "Mukit",
+      age: 25,
+    };
+  }, []);
   return (
     <div className="flex flex-col justify-center items-center gap-3 pt-20">
       <h2 className="text-xl font-semibold text-center">Count: {count}</h2>
@@ -15,7 +21,7 @@ const Count = () => {
           Increment
         </button>
       </div>
-      <ChildComponent count={count}></ChildComponent>
+      <ChildComponent myName={bioData}></ChildComponent>
     </div>
   );
 };
