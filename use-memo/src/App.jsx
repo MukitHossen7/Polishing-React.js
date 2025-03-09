@@ -1,11 +1,14 @@
-import Count from "./components/Count";
+// import Count from "./components/Count";
 // import MemoParentComponent from "./components/MemoParentComponent";
+
+import UseCallback from "./components/UseCallback";
 
 function App() {
   return (
     <>
       {/* <MemoParentComponent></MemoParentComponent> */}
-      <Count></Count>
+      {/* <Count></Count> */}
+      <UseCallback></UseCallback>
     </>
   );
 }
