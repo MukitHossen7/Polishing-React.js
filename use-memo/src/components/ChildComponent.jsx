@@ -19,11 +19,13 @@
 
 import { memo, useState } from "react";
 
-export const ChildComponent = memo(() => {
+export const ChildComponent = memo(({ count }) => {
   const [text, setText] = useState("");
   console.log("Child Component");
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="flex flex-col justify-center items-center mt-10 gap-2">
+      <h2 className="text-xl font-semibold text-center">Count: {count}</h2>
+      <p className="text-xl font-semibold text-center">Text: {text}</p>
       <input
         type="text"
         value={text}

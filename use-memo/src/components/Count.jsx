@@ -15,7 +15,7 @@ const Count = () => {
           Increment
         </button>
       </div>
-      <ChildComponent></ChildComponent>
+      <ChildComponent count={count}></ChildComponent>
     </div>
   );
 };
