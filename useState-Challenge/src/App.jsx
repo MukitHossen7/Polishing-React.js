@@ -1,15 +1,48 @@
-import { useState } from "react";
+import { useReducer } from "react";
 function App() {
-  const [users, setUsers] = useState({
+  // const [users, setUsers] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  // });
+
+  // const handleUsers = (e) => {
+  //   setUsers({ ...users, [e.target.name]: e.target.value });
+  // };
+  const initialState = {
     name: "",
     email: "",
     phone: "",
-  });
+  };
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "FIELD_UPDATE":
+        return {
+          ...state,
+          [action.payload.field]: action.payload.value,
+        };
+      case "RESET":
+        return initialState;
+      default:
+        return state;
+    }
+  };
+  const [users, dispatch] = useReducer(reducer, initialState);
 
   const handleUsers = (e) => {
-    setUsers({ ...users, [e.target.name]: e.target.value });
+    dispatch({
+      type: "FIELD_UPDATE",
+      payload: {
+        field: e.target.name,
+        value: e.target.value,
+      },
+    });
   };
-
+  const handleReset = () => {
+    dispatch({
+      type: "RESET",
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(users);
@@ -62,6 +95,13 @@ function App() {
             className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
           >
             Submit
+          </button>
+          <button
+            onClick={handleReset}
+            type="Reset"
+            className="bg-red-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+          >
+            Reset
           </button>
         </form>
       </div>
