@@ -6,8 +6,8 @@ function App() {
     phone: "",
   });
 
-  const handleUsers = (input, value) => {
-    setUsers({ ...users, [input]: value });
+  const handleUsers = (e) => {
+    setUsers({ ...users, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -31,7 +31,7 @@ function App() {
               name="name"
               className="w-full border border-gray-300 rounded px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={users.name}
-              onChange={(e) => handleUsers(e.target.name, e.target.value)}
+              onChange={handleUsers}
             />
           </div>
 
@@ -42,7 +42,7 @@ function App() {
               name="email"
               className="w-full border border-gray-300 rounded px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={users.email}
-              onChange={(e) => handleUsers(e.target.name, e.target.value)}
+              onChange={handleUsers}
             />
           </div>
 
@@ -53,7 +53,7 @@ function App() {
               name="phone"
               className="w-full border border-gray-300 rounded px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={users.phone}
-              onChange={(e) => handleUsers(e.target.name, e.target.value)}
+              onChange={handleUsers}
             />
           </div>
 
